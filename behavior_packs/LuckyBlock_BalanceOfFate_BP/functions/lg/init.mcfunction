@@ -13,7 +13,7 @@ scoreboard objectives add lg_last  dummy "LG·上一刻回执计数(内部)"
 scoreboard objectives add lg_ready dummy "LG·实体落地门控(0=未落地)"
 scoreboard objectives add lg_cfg   dummy "LG·配置(假玩家名=变量名)"
 # 建筑分派与地形掷骰（原先散落在 generate_at_seed 里"用到才建"，统一挪到初始化）
-scoreboard objectives add lucky_bldg_id dummy "遗落之地·本次建筑编号(1-3)"
+scoreboard objectives add lucky_bldg_id dummy "遗落之地·地形加权掷骰结果"
 scoreboard objectives add lucky_roll    dummy "遗落之地·地形掷骰(草方块→平原/森林)"
 scoreboard objectives add lg_discard    dummy "LG·因落在实体方块里被丢弃的种子(诊断)"
 

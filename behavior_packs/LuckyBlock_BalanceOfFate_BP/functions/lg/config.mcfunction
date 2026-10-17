@@ -5,7 +5,7 @@
 #   /scoreboard players set period lg_cfg 2400   → 改成 2 分钟一次
 # ============================================================================
 # 探测周期（刻）6000=5分钟 2400=2分钟 600=30秒
-scoreboard players set period  lg_cfg  600
+scoreboard players set period  lg_cfg  1200
 # 条件不满足时的重试间隔（刻）
 scoreboard players set retry   lg_cfg   40
 # 总开关 1=开 0=关

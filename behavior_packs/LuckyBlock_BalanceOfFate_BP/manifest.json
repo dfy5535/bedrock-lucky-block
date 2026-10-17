@@ -2,12 +2,12 @@
   "format_version": 2,
   "header": {
     "name": "§6§l万象天平·幸运方块 BP",
-    "description": "支持 -100~+100 幸运值动态调律与 1000 种原生随机事件引擎 (1.26.51+)\n【1.21.60 兼容版】最低支持 1.21.60（@minecraft/server 1.17.0）；已去除 2.x 专属 API 依赖，向上兼容 1.21.60+。",
-    "uuid": "c749bb59-d680-4b73-812d-2054f4804ed6",
+    "description": "支持 -100~+100 幸运值动态调律与 1000 种原生随机事件引擎\n【v1.6.0 · 128 建筑池 + 地形加权 + 遗迹间距】遗落之地建筑从 36 座扩到 128 座，12 种地形每种都可随机落到任意一座；地形匹配建筑概率 ×4、邻近地形 ×2。本版把遗迹间距从 72 格拉到 192 格，最小间隔 60 秒，不再扎堆。\n【1.21.60 兼容版】最低 1.21.60（@minecraft/server 1.17.0），向上兼容 1.26.52.3",
+    "uuid": "b1f4a0c2-7d31-4e58-9a6c-0e1d2f3a5b01",
     "version": [
       1,
-      3,
-      2
+      6,
+      0
     ],
     "min_engine_version": [
       1,
@@ -18,32 +18,32 @@
   "modules": [
     {
       "type": "data",
-      "uuid": "aa46df2a-b167-466c-9a78-16cad26dee00",
+      "uuid": "b1f4a0c2-7d31-4e58-9a6c-0e1d2f3a5b02",
       "version": [
         1,
-        3,
-        2
+        6,
+        0
       ]
     },
     {
       "type": "script",
       "language": "javascript",
-      "uuid": "f40d0172-6650-48bf-847e-51528efe3650",
+      "uuid": "b1f4a0c2-7d31-4e58-9a6c-0e1d2f3a5b03",
       "entry": "scripts/main.js",
       "version": [
         1,
-        3,
-        2
+        6,
+        0
       ]
     }
   ],
   "dependencies": [
     {
-      "uuid": "df411e8c-4538-49c0-8db1-e322656ba810",
+      "uuid": "b1f4a0c2-7d31-4e58-9a6c-0e1d2f3a5b04",
       "version": [
         1,
-        3,
-        2
+        6,
+        0
       ]
     },
     {

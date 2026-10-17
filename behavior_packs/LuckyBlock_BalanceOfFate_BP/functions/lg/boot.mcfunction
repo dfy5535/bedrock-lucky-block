@@ -4,3 +4,12 @@
 #       （不能用计分板判断——判断计分板是否存在本身就要用计分板，鸡生蛋）
 # ============================================================================
 execute unless entity @e[type=armor_stand,name="LG_Boot"] run function lg/init
+
+# ============================================================================
+# v1.6.0 配置迁移：老世界里的 lg_cfg 仍是旧值（period 600），升级后必须刷新一次
+#   用「假玩家 LG_CFG_VER 在 lg_cfg 上的分数」当迁移标记（分数不存在 = 未迁移）。
+#   ⚠️ 不能新开一块计分板当标记：老世界没有那块板，判定会一直报错、永远迁移不了。
+#   副作用：只执行一次；玩家若手工改过 period，升级时会被重置为默认值。
+# ============================================================================
+execute unless score LG_CFG_VER lg_cfg matches 2 run function lg/config
+execute unless score LG_CFG_VER lg_cfg matches 2 run scoreboard players set LG_CFG_VER lg_cfg 2

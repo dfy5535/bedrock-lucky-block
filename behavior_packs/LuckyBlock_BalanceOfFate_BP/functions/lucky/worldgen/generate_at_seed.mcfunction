@@ -6,13 +6,13 @@
 # （原先写在这里 = "用到才建"，每生成一次就重跑一遍建板命令，属于放错位置）
 # ==========================================================================
 
-## 1. 防重叠守卫：72 格内已有**永久遗迹地标**则放弃本次
+## 1. 防重叠守卫：192 格内已有**永久遗迹地标**则放弃本次
 ##    ⚠️ 原先判据是 `@e[type=lucky:wild_marker,r=72]` —— 但标记只活 0.5 秒
 ##       （脚本每 10 刻就把它换成方块并删掉），这个判据几乎永远为空，等于没有防线。
 ##       换成长期存在的 `lg_mark` 地标才真正拦得住。
 ##    ⚠️ 不能再判 `lg_site` —— 种子自己就带 lg_site（见 lg/spawn），会永远自杀。
-execute if entity @e[tag=lg_mark,r=72] run event entity @s lucky:despawn
-execute if entity @e[tag=lg_mark,r=72] run kill @s
+execute if entity @e[tag=lg_mark,r=192] run event entity @s lucky:despawn
+execute if entity @e[tag=lg_mark,r=192] run kill @s
 
 ## 2. Detect Terrain Surface / Dimension Block & Build 1 of 3 Biome-Matched Structures
 # --- The End ---
@@ -96,7 +96,7 @@ execute unless entity @s[tag=lucky_matched] unless block ~ ~-1 ~ air unless bloc
 execute unless entity @s[tag=lucky_matched] unless block ~ ~-1 ~ air run tag @s add lucky_matched
 
 ## 3. ★ 留下永久「遗迹地标」（反重叠的唯一长期判据）★
-##    ⚠️ 踩过的坑：种子建完就 kill 的话，lg_scan 的 `@e[tag=lg_site,r=180]` 防重叠
+##    ⚠️ 踩过的坑：种子建完就 kill 的话，lg_scan 的 `@e[tag=lg_site,r=320]` 防重叠
 ##       与玩家 40/48 格滞回**全部失效**（"已有生成物"的证据随种子一起消失），
 ##       结果是遗迹会在同一片区域反复堆叠。
 ##    做法：在遗址上方召唤隐形盔甲架，让它自己落到屋顶/地面上。

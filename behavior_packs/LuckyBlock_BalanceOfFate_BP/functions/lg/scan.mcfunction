@@ -18,7 +18,7 @@ execute as @a[tag=lg_in_zone] at @s unless entity @e[tag=lg_site,r=48] run tag @
 # ① 时钟到点（可热改）② 总开关
 # ③ 随机挑一名不在生成区内的玩家  ④⑤ 脚下是实心地面
 # ⑥ 防重叠半径内没有已有生成物
-execute if score LG_GLOBAL lg_cd >= period lg_cfg if score enabled lg_cfg matches 1 as @r[tag=!lg_in_zone] at @s unless block ~ ~-1 ~ air unless block ~ ~-1 ~ water unless entity @e[tag=lg_site,r=180] run function lg/spawn
+execute if score LG_GLOBAL lg_cd >= period lg_cfg if score enabled lg_cfg matches 1 as @r[tag=!lg_in_zone] at @s unless block ~ ~-1 ~ air unless block ~ ~-1 ~ water unless entity @e[tag=lg_site,r=320] run function lg/spawn
 
 # ---------- 5. 成功门控：只有"真的生成了"才把时钟归零 ----------
 # ⚠️ 绝不能用"条件成立就归零"——召唤静默失败时会误判成功，导致永不重试。

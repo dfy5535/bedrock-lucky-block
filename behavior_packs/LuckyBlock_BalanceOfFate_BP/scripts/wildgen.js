@@ -28,6 +28,7 @@ const LUCK_BY_TAG = {
   lucky_luck_n75: -75,
   lucky_luck_n50: -50,
   lucky_luck_n25: -25,
+  lucky_luck_0: 0,        // 中性（Tier 2 混沌原初）—— 128 建筑池的 normal 档用
   lucky_luck_p25: 25,
   lucky_luck_p50: 50,
   lucky_luck_p100: 100,
