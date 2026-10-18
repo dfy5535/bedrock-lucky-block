@@ -54,6 +54,18 @@
 
 ---
 
+## 语言版本（English / 日本語）
+
+每个语言**独立打包**：只带一份语言文件（`en_US.lang` / `ja_JP.lang`），包内**不含任何中文**（连代码注释都翻过），玩法与数值和中文版完全一致。
+
+| 语言 | 文件 |
+|---|---|
+| 🇨🇳 中文 | `dist/LuckyBlock_BalanceOfFate_v1.6.0_1.26.51-full.mcaddon`<br>`dist/LuckyBlock_BalanceOfFate_v1.6.0_1.21.60-compat.mcaddon` |
+| 🇬🇧 English | `dist/LuckyBlock_BalanceOfFate_v1.6.0_1.26.51-full-en.mcaddon`<br>`dist/LuckyBlock_BalanceOfFate_v1.6.0_1.21.60-compat-en.mcaddon` |
+| 🇯🇵 日本語 | `dist/LuckyBlock_BalanceOfFate_v1.6.0_1.26.51-full-ja.mcaddon`<br>`dist/LuckyBlock_BalanceOfFate_v1.6.0_1.21.60-compat-ja.mcaddon` |
+
+> 同一变体只装**一个语言**即可；三种语言的包 UUID 各不相同，可以并存但不建议同时启用。
+
 ## 安装
 
 1. 下载对应版本的 `.mcaddon`
